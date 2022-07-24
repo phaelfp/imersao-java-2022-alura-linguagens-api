@@ -1,229 +1,62 @@
-_type: export
-__export_format: 4
-__export_date: 2022-07-24T23:37:02.254Z
-__export_source: insomnia.desktop.app:v2022.4.2
-resources:
-  - _id: req_wrk_8ee8e7096107442bb8cf7411f37ac73f4654bb2e
-    parentId: wrk_8ee8e7096107442bb8cf7411f37ac73f
-    modified: 1658703260606
-    created: 1658437352798
-    url: "{{ base_url }}/linguagens"
-    name: /linguagens
-    description: ""
-    method: POST
-    body:
-      mimeType: application/json
-      text: >-
-        {
-          "name": "JavaScript",
-          "urlImage": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/javascript/javascript_256x256.png",
-          "ranking": 6
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-        id: pair_bed88665f5414a529af2d7029a32e594
-    authentication: {}
-    metaSortKey: -1658437352798
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: wrk_8ee8e7096107442bb8cf7411f37ac73f
-    parentId: null
-    modified: 1658436108054
-    created: 1658436108054
-    name: imersao-java-alura
-    description: ""
-    scope: design
-    _type: workspace
-  - _id: req_wrk_8ee8e7096107442bb8cf7411f37ac73f23411bdd
-    parentId: wrk_8ee8e7096107442bb8cf7411f37ac73f
-    modified: 1658436724498
-    created: 1658436724498
-    url: "{{ base_url }}/linguagens"
-    name: /linguagens
-    description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers: []
-    authentication: {}
-    metaSortKey: -1658436724498
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: env_b8b242b1acfe25b8cacafec28416affdb90135bd
-    parentId: wrk_8ee8e7096107442bb8cf7411f37ac73f
-    modified: 1658436108059
-    created: 1658436108059
-    name: Base Environment
-    data:
-      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
-    dataPropertyOrder: null
-    color: null
-    isPrivate: false
-    metaSortKey: 1658436108059
-    _type: environment
-  - _id: jar_b8b242b1acfe25b8cacafec28416affdb90135bd
-    parentId: wrk_8ee8e7096107442bb8cf7411f37ac73f
-    modified: 1658436108062
-    created: 1658436108062
-    name: Default Jar
-    cookies: []
-    _type: cookie_jar
-  - _id: spc_7f3a6a2a7fc84b9d8dba7187d71dc018
-    parentId: wrk_8ee8e7096107442bb8cf7411f37ac73f
-    modified: 1658703381472
-    created: 1658436108055
-    fileName: imersao-java-alura
-    contents: "openapi: 3.0.0
-
-      info:
-
-      \  version: 1.0.0
-
-      \  title: Linguagens API
-
-      \  description: A simple API development in Imersion Java by Alura
-      in 2022
-
-      servers:
-
-      \  - url: http://localhost:8080
-
-      \    description: Developer
-
-      paths:
-
-      \  /linguagens:
-
-      \    get:
-
-      \      description: Returns a list of linguagens
-
-      \      responses:
-
-      \        '200':
-
-      \          description: Successful response
-
-      \          content:
-
-      \            application/json:
-
-      \              schema:
-
-      \                type: array
-
-      \                items:
-
-      \                  type: object
-
-      \                  properties:
-
-      \                    id:
-
-      \                      type: string
-
-      \                    name:
-
-      \                      type: string
-
-      \                    urlImage:
-
-      \                      type: string
-
-      \                    ranking:
-
-      \                      type: integer
-
-      \    post:
-
-      \      description: Save the new linguagem
-
-      \      requestBody:
-
-      \        required: true
-
-      \        content:
-
-      \          application/json:
-
-      \            schema:
-
-      \              type: object\ 
-
-      \              properties:
-
-      \                  name:
-
-      \                    type: string
-
-      \                  urlImage:
-
-      \                    type: string
-
-      \                  ranking:
-
-      \                    type: integer
-
-      \      responses:
-
-      \        '200':
-
-      \          description: Successful response
-
-      \          content:
-
-      \            application/json:
-
-      \              schema:
-
-      \                type: object
-
-      \                properties:
-
-      \                  id:
-
-      \                    type: string
-
-      \                  name:
-
-      \                    type: string
-
-      \                  urlImage:
-
-      \                    type: string
-
-      \                  ranking:
-
-      \                    type: integer
-
-      \                    "
-    contentType: yaml
-    _type: api_spec
-  - _id: env_env_b8b242b1acfe25b8cacafec28416affdb90135bd_sub
-    parentId: env_b8b242b1acfe25b8cacafec28416affdb90135bd
-    modified: 1658436724501
-    created: 1658436724501
-    name: OpenAPI env
-    data:
-      scheme: http
-      base_path: ""
-      host: localhost:8080
-    dataPropertyOrder: null
-    color: null
-    isPrivate: false
-    metaSortKey: 1658436724501
-    _type: environment
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Linguagens API
+  description: A simple API development in Imersion Java by Alura in 2022
+servers:
+  - url: http://localhost:8080
+    description: Developer
+paths:
+  /linguagens:
+    get:
+      description: Returns a list of linguagens
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    name:
+                      type: string
+                    urlImage:
+                      type: string
+                    ranking:
+                      type: integer
+    post:
+      description: Save the new linguagem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object 
+              properties:
+                  name:
+                    type: string
+                  urlImage:
+                    type: string
+                  ranking:
+                    type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  urlImage:
+                    type: string
+                  ranking:
+                    type: integer
+                    
