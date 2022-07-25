@@ -6,6 +6,8 @@ info:
 servers:
   - url: http://localhost:8080
     description: Developer
+  - url: https://rfpereira-linguagens-api.herokuapp.com
+    description: QA in Heroku Cloud
 paths:
   /linguagens:
     get:
